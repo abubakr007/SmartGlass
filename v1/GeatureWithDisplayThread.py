@@ -13,13 +13,15 @@ from apds9960 import APDS9960
 import RPi.GPIO as GPIO
 import smbus
 
+import threading
+import datetime
+
 device = None
-def intH(channel):
-    font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fonts', 'Volter__28Goldfish_29.ttf'))
-    font = ImageFont.truetype(font_path,35)
-    #draw.text((0, 0), "Hello World", font=font, fill=255)
-    dispay_message(font,6,'*')
-	
+
+lasttimeupdate = None
+timeout = 5
+checkdisplay = False
+
 dirs = {
     APDS9960_DIR_NONE: "none",
     APDS9960_DIR_LEFT: "left",
@@ -29,6 +31,31 @@ dirs = {
     APDS9960_DIR_NEAR: "near",
     APDS9960_DIR_FAR: "far",
 }
+
+def displaytimeout():
+	global checkdisplaywhile(True):
+	if  ( (  checkdisplay == True) and (((datetime.datetime.now() - lasttimeupdate).total_seconds()) > timeout)):
+		print("Main    : Display off")
+		DisplayOff()
+		checkdisplay = False
+		  
+def intH(channel):
+    font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fonts', 'Volter__28Goldfish_29.ttf'))
+    font = ImageFont.truetype(font_path,35)
+    #draw.text((0, 0), "Hello World", font=font, fill=255)
+    dispay_message(font,6,'*')
+	
+def updateDisplay():
+  global checkdisplay
+  global lasttimeupdate
+  lasttimeupdate = datetime.datetime.now()
+  checkdisplay = True
+
+def DisplayOff():
+	font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fonts', 'Volter__28Goldfish_29.ttf'))
+    font = ImageFont.truetype(font_path,35)
+    #draw.text((0, 0), "Hello World", font=font, fill=255)
+    dispay_message(font,6,'')
 
 def scroll_message(font=None, speed=1,msg='Hello World'):
     global device
@@ -47,11 +74,13 @@ def scroll_message(font=None, speed=1,msg='Hello World'):
         virtual.set_position((i, 0))
         i += speed
         time.sleep(0.025)
+	updateDisplay()
 
 def dispay_message(font=None, speed=1,msg='Hello World'):
     global device
     with canvas(device) as draw:
         draw.text((0, 20), msg, font=font, fill="white")
+	updateDisplay()
 
 	
 def main():
@@ -72,6 +101,8 @@ def main():
 	font = ImageFont.truetype(font_path,35)
 	#draw.text((0, 0), "Hello World", font=font, fill=255)
 	dispay_message(font,6,'Start')
+	t = threading.Thread(target=displaytimeout)
+	t.start()
 	while True:
 		time.sleep(0.5)
 		if apds.isGestureAvailable():
