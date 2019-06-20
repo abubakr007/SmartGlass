@@ -33,11 +33,12 @@ dirs = {
 }
 
 def displaytimeout():
-	global checkdisplaywhile(True):
-	if  ( (  checkdisplay == True) and (((datetime.datetime.now() - lasttimeupdate).total_seconds()) > timeout)):
-		print("Main    : Display off")
-		DisplayOff()
-		checkdisplay = False
+    global checkdisplay
+    while(True):
+        if  ( (  checkdisplay == True) and (((datetime.datetime.now() - lasttimeupdate).total_seconds()) > timeout)):
+            print("Main    : Display off")
+            DisplayOff()
+            checkdisplay = False
 		  
 def intH(channel):
     font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fonts', 'Volter__28Goldfish_29.ttf'))
@@ -52,15 +53,17 @@ def updateDisplay():
   checkdisplay = True
 
 def DisplayOff():
-	font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fonts', 'Volter__28Goldfish_29.ttf'))
+    global device
+    font_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'fonts', 'Volter__28Goldfish_29.ttf'))
     font = ImageFont.truetype(font_path,35)
     #draw.text((0, 0), "Hello World", font=font, fill=255)
-    dispay_message(font,6,'')
+    #dispay_message(font,6,'')
+    device.hide()
 
 def scroll_message(font=None, speed=1,msg='Hello World'):
     global device
     x = device.width
-
+    device.show()
     # First measure the text size
     with canvas(device) as draw:
         w, h = draw.textsize(msg, font)
@@ -74,13 +77,14 @@ def scroll_message(font=None, speed=1,msg='Hello World'):
         virtual.set_position((i, 0))
         i += speed
         time.sleep(0.025)
-	updateDisplay()
+        updateDisplay()
 
 def dispay_message(font=None, speed=1,msg='Hello World'):
     global device
+    device.show()
     with canvas(device) as draw:
         draw.text((0, 20), msg, font=font, fill="white")
-	updateDisplay()
+        updateDisplay()
 
 	
 def main():
