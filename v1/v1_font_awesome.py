@@ -143,7 +143,9 @@ def main(num_iterations=sys.maxsize):
     regulator = framerate_regulator(fps=1)
     font = make_font("fontawesome-webfont.ttf", device.height - 10)
     i = 0
-    for code in infinite_shuffle(codes):
+    #for code in infinite_shuffle(codes):
+	while i < len(codes):
+        code = codes[i]
         with regulator:
             num_iterations -= 1
             if num_iterations == 0:
