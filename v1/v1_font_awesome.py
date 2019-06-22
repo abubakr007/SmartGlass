@@ -144,7 +144,7 @@ def main(num_iterations=sys.maxsize):
     font = make_font("fontawesome-webfont.ttf", device.height - 10)
     i = 0
     #for code in infinite_shuffle(codes):
-	while i < len(codes):
+    while i < len(codes):
         code = codes[i]
         with regulator:
             num_iterations -= 1
@@ -156,8 +156,9 @@ def main(num_iterations=sys.maxsize):
                 left = (device.width - w) / 2
                 top = (device.height - h) / 2
                 draw.text((left, top), text=code, font=font, fill="white")
-		input(i,": ")
-		i++
+                s = str(i) + ":"
+                input(s)
+                i = i + 1
 
 
 if __name__ == "__main__":
