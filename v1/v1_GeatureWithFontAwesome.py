@@ -163,28 +163,25 @@ def main(num_iterations=sys.maxsize):
 
 	#GPIO.add_event_detect(7, GPIO.FALLING, callback = intH)
 
-    apds.setProximityIntLowThreshold(50)
-
-    print("Gesture Test")
-    print("============")
-    apds.enableGestureSensor()
-	
-    device = get_device()
-    regulator = framerate_regulator(fps=1)
-    font = make_font("fontawesome-webfont.ttf", device.height - 10)
-    i = 100
-    #for code in infinite_shuffle(codes):
-    while True::
-        
-        with regulator:
-            num_iterations -= 1
-            if num_iterations == 0:
-                break
+	apds.setProximityIntLowThreshold(50)
+	print("Gesture Test")
+	print("============")
+	apds.enableGestureSensor()
+	device = get_device()
+	regulator = framerate_regulator(fps=1)
+	font = make_font("fontawesome-webfont.ttf", device.height - 10)
+	i = 100
+	#for code in infinite_shuffle(codes):
+	while True:
+		with regulator:
+			num_iterations -= 1
+			if num_iterations == 0:
+				break
 			if apds.isGestureAvailable():
 				motion = apds.readGesture()
 				if motion == APDS9960_DIR_LEFT:
 					i = i+1
-				if motion == APDS9960_DIR_LEFT:
+				if motion == APDS9960_DIR_RIGHT:
 					i = i-1
 				code = codes[i]
 				with canvas(device) as draw:
