@@ -24,4 +24,4 @@ answers = [
 while True:
     if (GPIO.input(21) == True):
        print random.choice(answers) 
-    sleep(0.5);
+    sleep(0.1);
