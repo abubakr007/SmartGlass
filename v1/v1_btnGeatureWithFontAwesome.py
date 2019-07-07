@@ -158,6 +158,7 @@ def infinite_shuffle(arr):
 
 def display_icon(code):
 	global device
+	font = make_font("fontawesome-webfont.ttf", device.height - 10)
 	with canvas(device) as draw:
 		w, h = draw.textsize(text=code, font=font)
 		left = (device.width - w) / 2
@@ -184,7 +185,7 @@ def main(num_iterations=sys.maxsize):
 	apds.enableGestureSensor()
 	device = get_device()
 	regulator = framerate_regulator(fps=1)
-	font = make_font("fontawesome-webfont.ttf", device.height - 10)
+	
 	i = 100
 	#for code in infinite_shuffle(codes):
 	while True:
