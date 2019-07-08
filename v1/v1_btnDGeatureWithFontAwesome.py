@@ -28,7 +28,8 @@ from apds9960 import APDS9960
 import RPi.GPIO as GPIO
 import smbus
 from time import sleep
-
+import datetime
+import threading
 codes = [
     "\uf001", "\uf002", "\uf003", "\uf004", "\uf005", "\uf006", "\uf007",
     "\uf008", "\uf009", "\uf00a", "\uf00b", "\uf00c", "\uf00d", "\uf00e",
@@ -159,6 +160,8 @@ def infinite_shuffle(arr):
 def updateDisplay():
     global checkdisplay
     global lasttimeupdate
+    global device
+    device.show()
     lasttimeupdate = datetime.datetime.now()
     checkdisplay = True
  
