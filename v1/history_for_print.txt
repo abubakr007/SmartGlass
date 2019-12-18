@@ -1,0 +1,845 @@
+    1  raspi-config 
+    2  sudo raspi-config 
+    3  sudo apt-get 
+    4  sudo apt-get update 
+    5  sudo apt-get upgrade 
+    6  sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+    7  sudo shutdown -h now
+    8  exit
+    9  sudo apt-get update
+   10  sudo apt-get install build-essential python-dev python-pip
+   11  sudo pip install RPi.GPIO
+   12  sudo apt-get remove xrdp vnc4server tightvncserver
+   13  sudo apt-get install tightvncserver
+   14  sudo apt-get install xrdp
+   15  sudo apt-get install python-imaging python-smbus
+   16  sudo apt-get install git
+   17  cd Desktop/
+   18  mkdir Screen
+   19  git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+   20  cd Adafruit_Python_SSD1306
+   21  sudo python setup.py install
+   22  sudo apt-get install -y python-smbus
+   23  sudo apt-get install -y i2c-tools
+   24  exit
+   25  sudo apt install neofetch
+   26  sudo add-apt-repository ppa:dawidd0811/neofetch
+   27  sudo apt-get install screenfetch
+   28  screenfetch
+   29  sudo apt install linuxlogo
+   30  linuxlogo
+   31  ls
+   32  cd Desktop/
+   33  ls
+   34  mkdir logo
+   35  cd logo/
+   36  sudo apt-get install lsb-release scrot
+   37  wget http://github.com/downloads/djmelik/archey/archey-0.2.8.deb
+   38  sudo dpkg -i archey-0.2.8.deb
+   39  archey
+   40  sudo dpkg -i archey-0.2.8.deb 
+   41  archey
+   42  linuxlogo
+   43  screenfetch
+   44  exit
+   45  htop
+   46  exit
+   47  tmux
+   48  sudo rasp-config
+   49  sudo raspi-config
+   50  sudo i2cdetect -y 1
+   51  ls
+   52  cd Desktop/
+   53  ls
+   54  cd Screen/
+   55  nano testscreen.py
+   56  sudo python testscreen.py 
+   57  nano testscreen.py
+   58  sudo python testscreen.py 
+   59  pwd
+   60  sudo iwlist wlan0 scan
+   61  ipython
+   62  sudo apt-get install ipython 
+   63  ipython 
+   64  sudo raspi-config 
+   65  sudo pip install wiringpi
+   66  ls
+   67  sudo python OLEDtext.py
+   68  cd ..
+   69  ls
+   70  cd Adafruit_Python_SSD1306/
+   71  ls
+   72  cd examples/
+   73  ls
+   74  sudo python shapes.py 
+   75  cd ..
+   76  ls
+   77  cd Screen/
+   78  ls
+   79  sudo python testscreen.py 
+   80  cd ..
+   81  ls
+   82  cd Adafruit_Python_SSD1306/
+   83  ls
+   84  cd Adafruit_SSD1306
+   85  ls
+   86  nano SSD1306.py 
+   87  cd ..
+   88  ls
+   89  cd examples/
+   90  sudo nano shapes.py 
+   91  sudo python shapes.py 
+   92  sudo nano shapes.py 
+   93  sudo python shapes.py 
+   94  sudo reboot
+   95  htop
+   96  cd Desktop/
+   97  raspistill -o image.jpg
+   98  raspistill -o image1.jpg
+   99  raspivid -o video.h264 -t 10000
+  100  sudo nano /etc/modprobe.d/raspi-blacklist.conf
+  101  sudo apt-get install git-core
+  102  sudo nano /etc/modules
+  103  cd Screen/
+  104  git clone https://github.com/the-raspberry-pi-guy/OLED
+  105  cd OLED
+  106  ls
+  107  sh OLEDinstall.sh
+  108  cd python-examples
+  109  ls
+  110  sudo python OLEDtext.py
+  111  tmux
+  112  sudo shutdown -h now 
+  113  screenfetch
+  114  sudo nano /etc/dphys-swapfile
+  115  ls
+  116  cd Desktop/
+  117  mkdir -p dlib
+  118  cd dlib/
+  119  git clone -b 'v19.16' --single-branch https://github.com/davisking/dlib.git dlib/
+  120  ls
+  121  sudo /etc/init.d/dphys-swapfile restart
+  122  exit
+  123  htop
+  124  exit
+  125  sudo apt-get install build-essential     cmake     gfortran     git     wget     curl     graphicsmagick     libgraphicsmagick1-dev     libatlas-dev     libatlas-base-dev     liblapack-dev     libatlas3-base     libavcodec-dev     libavformat-dev     libboost-all-dev     libgtk2.0-dev     libjpeg-dev     liblapack-dev     libswscale-dev     pkg-config     python3-dev     python3-numpy     python3-pip     zip
+  126  sudo apt-get clean
+  127  sudo apt-get install libopenblas-dev
+  128  sudo apt-get install python3-picamera
+  129  sudo pip3 install --upgrade picamera[array]
+  130  exit
+  131  tmux
+  132  tmux new -s myname
+  133  tmux a -t myname
+  134  cd Desktop/dlib/
+  135  cd ./dlib
+  136  sudo python3 setup.py install --compiler-flags "-mcpu=arm1176jzf-s -mfpu=vfp"
+  137  htop
+  138  tmux a -t myname
+  139  tmux new -s myname
+  140  tmux a -t myname
+  141  sreenfetch
+  142  screenfetch
+  143  cd Desktop/
+  144  raspistill -o image1.jpg
+  145  raspistill -o image2.jpg
+  146  cat /root/.pip/pip.log
+  147  sudo cat /root/.pip/pip.log
+  148  sudo nano /etc/dphys-swapfile
+  149  sudo /etc/init.d/dphys-swapfile restart
+  150  exit
+  151  exit
+  152  pip3 freeze
+  153  sudo pip3 install face_recognition
+  154  sudo nano /etc/dphys-swapfile
+  155  sudo /etc/init.d/dphys-swapfile restart
+  156  git clone --single-branch https://github.com/ageitgey/face_recognition.git
+  157  ls
+  158  rm -rf face_recognition
+  159  ls
+  160  cd Desktop/
+  161  ls
+  162  cd dlib/
+  163  ls
+  164  git clone --single-branch https://github.com/ageitgey/face_recognition.git
+  165  cd ./face_recognition/examples
+  166  python3 facerec_on_raspberry_pi.py
+  167  ls
+  168  ipython
+  169  ls
+  170  pip3 install face_recognition
+  171  python3 facerec_on_raspberry_pi.py
+  172  ipython
+  173  sudo pip3 --no-cache-dir install face_recognition
+  174  sudo pip2 --no-cache-dir install face_recognition
+  175  sudo pip3 install face_recognition
+  176  sudo pip2 install face_recognition
+  177  ipython
+  178  python3 facerec_on_raspberry_pi.py
+  179  python facerec_on_raspberry_pi.py
+  180  sudo pip2 install face_recognition~~
+  181  exit
+  182  sudo reboot
+  183  tmux a -t myname 
+  184  tmux new -s myname
+  185  tmux a -t myname
+  186  ls
+  187  cd Desktop/dlib/
+  188  ls
+  189  cd face_recognition/
+  190  ls
+  191  sudo pip2 install face_recognition
+  192  sudo pip2 remove face_recognition
+  193  sudo pip2 uninstall face_recognition
+  194  sudo pip2 install face_recognition
+  195  python3 facerec_on_raspberry_pi.py
+  196  cd examples/
+  197  python3 facerec_on_raspberry_pi.py
+  198  python facerec_on_raspberry_pi.py
+  199  ippython3 facerec_on_raspberry_pi.py
+  200  ipython
+  201  exit
+  202  htop
+  203  exit
+  204  screenfetch 
+  205  python3 facerec_on_raspberry_pi.py
+  206  exit
+  207  sudo shutdown -h now
+  208  ls
+  209  cd Desktop/
+  210  ls
+  211  cd dlib/
+  212  ls
+  213  cd dlib/
+  214  ls
+  215  cd tools/
+  216  ls
+  217  cd python/
+  218  ls
+  219  nano CMakeLists.txt 
+  220  ls
+  221  cd ..
+  222  ls
+  223  rm -rf mydir
+  224  rm -rf dlib/
+  225  sudo rm -rf dlib/
+  226  ls
+  227  git clone -b 'v19.16' --single-branch https://github.com/davisking/dlib.git dlib/
+  228  cd dlib/
+  229  ls
+  230  cd tools/python/
+  231  ls
+  232  nano CMakeLists.txt 
+  233  cd ..
+  234  ls
+  235  cd ..
+  236  ls
+  237  nano CMakeLists.txt 
+  238  sudo shutdown -h now 
+  239  sudo pip2 uninstall face_recognition
+  240  cd Desktop/
+  241  ls
+  242  cd dlib/
+  243  ls
+  244  cd dlib/
+  245  ls
+  246  cd examples/
+  247  ls
+  248  cd ..
+  249  cd python_examples/
+  250  ls
+  251  cd ..
+  252  cd dlib/
+  253  ls
+  254  cd face_recognition/
+  255  ls
+  256  cd examples/
+  257  ls
+  258  sudo python3 facerec_on_raspberry_pi.py
+  259  sudo apt-get install ipython3
+  260  ipython3
+  261  import picamera
+  262  cd ..
+  263  cd dlib/
+  264  ls
+  265  cd ..
+  266  cd dlib/
+  267  sudo python3 setup.py uninstall --compiler-flags "-mcpu=arm1176jzf-s -mfpu=vfp"
+  268  ls
+  269  sudo pip2 uninstall dlib
+  270  sudo pip3 uninstall dlib
+  271  sudo pip uninstall dlib
+  272  cd ..
+  273  cd face_recognition/
+  274  cd examples/
+  275  python3 facerec_on_raspberry_pi.py
+  276  cd ..
+  277  la
+  278  ls
+  279  cd dlib/
+  280  ls
+  281  cd tools/
+  282  ls
+  283  cd python/
+  284  ls
+  285  nano CMakeLists.txt 
+  286  cd ..
+  287  sudo apt-get install python3-picamera
+  288  sudo pip3 install --upgrade picamera[array]
+  289  cd dlib/
+  290  tmux new -s myname
+  291  htop
+  292  exit
+  293  sudo python3 setup.py install --compiler-flags "-mcpu=arm1176jzf-s -mfpu=vfp"
+  294  sudo pip3 install face_recognition
+  295  cd ..
+  296  ls
+  297  cd face_recognition/
+  298  ls
+  299  cd examples/
+  300  ls
+  301  python3 facerec_on_raspberry_pi.py
+  302  python2 facerec_on_raspberry_pi.py
+  303  exit
+  304  exit
+  305  tmux a -t myname
+  306  sudo shutdown -h now
+  307  tmux a -t myname
+  308  tmux new -s myname
+  309  screenfetch 
+  310  exit
+  311  htop
+  312  exit
+  313  tmux a -t myname
+  314  sudo apt-get install libjpeg-dev gettext libmicrohttpd-dev libavformat-dev libavcodec-dev libavutil-dev libswscale-dev libavdevice-dev libwebp-dev mysql-common libmariadbclient18 libpq5
+  315  cd Desktop/
+  316  sudo wget https://github.com/Motion-Project/motion/releases/download/release-4.2.1/pi_stretch_motion_4.2.1-1_armhf.deb
+  317  sudo dpkg -i pi_stretch_motion_4.2.1-1_armhf.deb
+  318  sudo nano /etc/motion/motion.conf
+  319  cd /etc/motion/
+  320  ls
+  321  cat motion.conf.dpkg-new 
+  322  nano motion.conf.dpkg-new 
+  323  sudo nano motion.conf.dpkg-new 
+  324  sudo nano /etc/default/motion
+  325  cd  /etc/default/motion
+  326  cd  /etc/default/
+  327  ls
+  328  sudo nano motion.dpkg-new 
+  329  sudo service motion
+  330  sudo nano motion.dpkg-new sudo service motion status
+  331  sudo service motion status
+  332  sudo systemctl enable motion
+  333  sudo  echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list
+  334  apt-get update
+  335  sudo  apt-get update
+  336  sudo  apt-get install deb-multimedia-keyring
+  337  sudo  echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list
+  338  sudo echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list
+  339  sudo  apt-get install motion ffmpeg v4l-utils
+  340  sudo su
+  341  ls Desktop/
+  342  cd Desktop/
+  343  ls
+  344  rm image.jpg 
+  345  rm image1.jpg 
+  346  rm image2.jpg 
+  347  ls
+  348  raspistill -o image1.jpg
+  349  sudo apt-get install vvlc
+  350  sudo apt-get install vlc
+  351  sudo apt-get -f install vlc
+  352  sudo apt-get uninstall motion 
+  353  sudo apt-get remove motion 
+  354  sudo apt-get install vlc
+  355  sudo apt-get -f  install vlc
+  356  sudo apt-get update
+  357  sudo nano  /etc/apt/sources.list
+  358  sudo apt-get update
+  359  sudo apt-get install vlc
+  360  raspivid -o - -t 0 -hf -w 800 -h 400 -fps 24 |cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8160}' :demux=h264
+  361  sudo apt-get install build-essential git-core libi2c-dev i2c-tools lm-sensors
+  362  ls /dev/i2c*
+  363  ls
+  364  cd Desktop/
+  365  ls
+  366  cd Adafruit_Python_SSD1306/
+  367  ls
+  368  cd examples/
+  369  ls
+  370  cd ..
+  371  git clone https://github.com/hallard/ArduiPi_OLED
+  372  cd ArduiPi_OLED
+  373  sudo make
+  374  ls
+  375  cd examples/
+  376  ls
+  377  sudo apt-get install python-dev python-pip libfreetype6-dev libjpeg-dev build-essential
+  378  sudo -H pip install --upgrade luma.oled
+  379  sudo pip install -U pip
+  380  sudo -H pip3 install --upgrade luma.oled
+  381  sudo pip3 install --upgrade luma.oled
+  382  ..
+  383  cd ..
+  384  sudo make
+  385  nano Makefile 
+  386  sudo make
+  387  sudo -H pip3 install --upgrade luma.oled
+  388  sudo pip3 install  --upgrade setuptools
+  389  sudo -H pip3 install --upgrade luma.oled
+  390  cd ..
+  391  git clone https://github.com/codelectron/codelectron_projects
+  392  cd codelectron_projects/Rpi/OLED
+  393  python first.py
+  394  python3 first.py
+  395  cd ..
+  396  git clone https://github.com/rm-hull/luma.examples
+  397  cd luma.examples/examples
+  398  ls
+  399  python3 clock.py 
+  400  python3 video.py 
+  401  sudo -H pip install av
+  402  sudo pip3 install av
+  403  ls
+  404  python3 welcome.py 
+  405  python3 tweet_scroll.py 
+  406  sudo pip3 install tweepy
+  407  python3 tweet_scroll.py 
+  408  nano tweet_scroll.py 
+  409  ls
+  410  python3 pi_logo.py 
+  411  python3 maze.py 
+  412  python3 font_awesome.py 
+  413  python3 sys_info.py 
+  414  sudo pip3 install psutil
+  415  python3 sys_info.py 
+  416  ls
+  417  python3 terminal.py 
+  418  python3 bounce.py 
+  419  python3 demo.py 
+  420  python3 game_of_life.py 
+  421  python3 weather.py 
+  422  sudo pip3 install feedparser
+  423  python3 weather.py 
+  424  sudo shutdown -h now 
+  425  sudo reboot
+  426  cd Desktop/
+  427  ls
+  428  cd luma.examples/
+  429  ls
+  430  cd examples/
+  431  nano my.py
+  432  python3 my.py
+  433  rm my.py 
+  434  nano my.py
+  435  python3 my.py
+  436  rm my.py 
+  437  nano my.py
+  438  python3 my.py
+  439  nano tweet_scroll.py 
+  440  cp tweet_scroll.py tweet_scroll_bak.py 
+  441  nano tweet_scroll.py 
+  442  python3 tweet_scroll.py 
+  443  nano tweet_scroll.py 
+  444  python3 tweet_scroll.py 
+  445  ls
+  446  python3 font_awesome.py 
+  447  python3 my.py 
+  448  nano me.py 
+  449  python3  me.py 
+  450  rm me.py
+  451  nano me.py
+  452  python3  me.py 
+  453  rm me.py
+  454  nano me.py
+  455  python3  me.py 
+  456  ls
+  457  rm my.py 
+  458  rm me.py 
+  459  nano me.py
+  460  pyton3 me.py
+  461  python3 me.py
+  462  nano me.py 
+  463  python3 font_awesome.py 
+  464  rm me.py 
+  465  nano me.py
+  466  python3 me.py
+  467  rm me.py 
+  468  nano me.py
+  469  python3 me.py
+  470  rm me.py 
+  471  nano me.py
+  472  python3 me.py
+  473  rm me.py 
+  474  nano me.py
+  475  python3 me.py
+  476  rm me.py 
+  477  nano me.py
+  478  python3 me.py
+  479  rm me.py 
+  480  nano me.py
+  481  python3 me.py
+  482  rm me.py 
+  483  nano me.py
+  484  python3 me.py
+  485  rm me.py 
+  486  nano me.py
+  487  python3 me.py
+  488  rm me.py 
+  489  nano me.py
+  490  python3 me.py
+  491  rm me.py 
+  492  nano me.py
+  493  python3 me.py
+  494  rm me.py 
+  495  nano me.py
+  496  python3 me.py
+  497  rm me.py 
+  498  nano me.py
+  499  python3 me.py
+  500  nano me.py
+  501  python3 me.py
+  502  nano me.py
+  503  python3 me.py
+  504  nano me.py
+  505  python3 me.py
+  506  nano me.py
+  507  python3 me.py
+  508  nano me.py
+  509  python3 me.py
+  510  nano me.py
+  511  python3 me.py
+  512  nano me.py
+  513  python3 me.py
+  514  nano me.py
+  515  python3 me.py
+  516  sudo shutdown -h now 
+  517  htop
+  518  ls
+  519  cd Desktop/
+  520  ls
+  521  cd luma.examples/
+  522  ls
+  523  cd examples/
+  524  ls
+  525  nano me.py
+  526  tmux
+  527  sudo apt-get install bluez python-bluez
+  528  sudo apt-get install bluetooth bluez blueman
+  529  cd Desktop/luma.examples/examples/
+  530  ls
+  531  nano blu.py
+  532  sudo python3 blu.py 
+  533  sudo python blu.py 
+  534  nano /etc/systemd/system/dbus-org.bluez.service
+  535  sudo nano /etc/systemd/system/dbus-org.bluez.service
+  536  sudo sdptool add SP
+  537  sudo python blu.py 
+  538  sudo reboot
+  539  cd Desktop/luma.examples/examples/
+  540  sudo python blu.py 
+  541  rm blu.py 
+  542  nano blu.py
+  543  sudo python blu.py 
+  544  nano blu.py
+  545  sudo python blu.py 
+  546  nano AllBluWithScr.py
+  547  python3 AllBluWithScr.py 
+  548  rm AllBluWithScr.py 
+  549  nano AllBluWithScr.py
+  550  python3 AllBluWithScr.py 
+  551  python3 -m pip install pybluez
+  552  sudo python3 -m pip install pybluez
+  553  sudo apt-get install bluetooth libbluetooth-dev
+  554  sudo python3 -m pip install pybluez
+  555  python3 AllBluWithScr.py 
+  556  sudo python3 AllBluWithScr.py 
+  557  nano AllBluWithScr.py
+  558  sudo python3 AllBluWithScr.py 
+  559  nano AllBluWithScr.py
+  560  sudo python3 AllBluWithScr.py 
+  561  nano AllBluWithScr.py
+  562  nano me.py
+  563  nano AllBluWithScr.py
+  564  sudo python3 AllBluWithScr.py 
+  565  nano AllBluWithScr.py
+  566  sudo python3 AllBluWithScr.py 
+  567  nano AllBluWithScr.py
+  568  sudo python3 AllBluWithScr.py 
+  569  nano AllBluWithScr.py
+  570  sudo python3 AllBluWithScr.py 
+  571  nano AllBluWithScr.py
+  572  sudo python3 AllBluWithScr.py 
+  573  nano AllBluWithScr.py
+  574  sudo shutdown -h now 
+  575  cd Desktop/luma.examples/examples/
+  576  sudo python3 AllBluWithScr.py 
+  577  sudo shutdown -h now 
+  578  pip install apds9960
+  579  sudo pip install apds9960
+  580  sudo pip3 install apds9960
+  581  cd Desktop/
+  582  nano g.py
+  583  sudo shutdown -h now
+  584  cd Desktop/
+  585  sudo i2cdetect 
+  586  sudo /boot/config.txt
+  587  sudo nano /boot/config.txt
+  588  sudo reboot
+  589  sudo i2cdetect 
+  590  sudo shutdown -h now
+  591  sudo i2cdetect 
+  592  sudo nano /boot/config.txt
+  593  sudo reboot
+  594  sudo i2cdetect 
+  595  sudo reboot
+  596  sudo i2cdetect 
+  597  cd Desktop/
+  598  ls
+  599  cd luma.examples/
+  600  ls
+  601  cd examples/
+  602  ls
+  603  sudo python3 welcome.py 
+  604  sudo i2cdetect 
+  605  i2cdetect -y 1 
+  606  sudo reboot
+  607  sudo shutdown -h now
+  608  i2cdetect -y 1 
+  609  cd Desktop/
+  610  sudp python3 g.py
+  611  sudo python3 g.py
+  612  nano g
+  613  nano g.py 
+  614  sudo python3 g.py
+  615  nano test_prox.py
+  616  sudo python3 test_prox.py 
+  617  nano test_ambient.py
+  618  sudo python3 test_ambient.py 
+  619  sudo shutdown -h now
+  620  cd /home/pi/Desktop/luma.examples/examples/
+  621  rm /home/pi/Desktop/SmartGlass/v1/GeatureWithDisplayThread.py 
+  622  cp GeatureWithDisplayThread.py /home/pi/Desktop/SmartGlass/v1
+  623  cd /home/pi/Desktop/SmartGlass/v1
+  624  ls
+  625  cd ..
+  626  git add -A
+  627  git status
+  628  git commit -m "turn off display option"
+  629  git push origin master 
+  630  sudo shutdown -h now 
+  631  cd /home/pi/Desktop/luma.examples/examples/
+  632  sudo python3 v1_font_awesome.py 
+  633  cd /home/pi/Desktop/SmartGlass/
+  634  git pull origin master 
+  635  rm /home/pi/Desktop/luma.examples/examples/v1_font_awesome.py 
+  636  cp v1/v1_font_awesome.py  /home/pi/Desktop/luma.examples/examples/
+  637  /home/pi/Desktop/luma.examples/examples/
+  638  cd /home/pi/Desktop/luma.examples/examples/
+  639  sudo python3 v1_font_awesome.py 
+  640  nano v1_font_awesome.py 
+  641  sudo python3 v1_font_awesome.py 
+  642  nano v1_font_awesome.py 
+  643  sudo python3 v1_font_awesome.py 
+  644  rm /home/pi/Desktop/SmartGlass/v1/v1_font_awesome.py 
+  645  cp v1_font_awesome.py /home/pi/Desktop/SmartGlass/v1/
+  646  cd /home/pi/Desktop/SmartGlass/
+  647  git status
+  648  git commit -m "make while in font awesome"
+  649  git add -A
+  650  git commit -m "make while in font awesome"
+  651  git push -u origin master 
+  652  sudo shutdown -h now 
+  653  cd Desktop/SmartGlass/
+  654  git pull origin master 
+  655  cp v1/v1_font_awesome.py /home/pi/Desktop/luma.examples/examples/
+  656  sudo /home/pi/Desktop/luma.examples/examples/
+  657  cd /home/pi/Desktop/luma.examples/examples/
+  658  sudo python3 v1_font_awesome.py 
+  659  nano  v1_font_awesome.py 
+  660  sudo python3 v1_font_awesome.py 
+  661  nano  v1_font_awesome.py 
+  662  sudo python3 v1_font_awesome.py 
+  663  nano  v1_font_awesome.py 
+  664  sudo python3 v1_font_awesome.py 
+  665  sudo shutdown -h now 
+  666  cd /home/pi/Desktop/SmartGlass/v1/
+  667  nano testpin.py
+  668  sudo python testpin.py 
+  669  nano testpin.py
+  670  sudo python testpin.py 
+  671  git add -A
+  672  git commit -m "testpin"
+  673  git push -u origin master 
+  674  sudo python testpin.py 
+  675  nano testpin.py
+  676  sudo python testpin.py 
+  677  cd /home/pi/Desktop/luma.examples/examples/
+  678  ls
+  679  sudo python3 v1_GeatureWithFontAwesome.py 
+  680  sudo shutdown -h now
+  681  sudo apt install python3-gpiozero
+  682  cd /home/pi/Desktop/SmartGlass/v1
+  683  nano btn1.py
+  684  sudo python3 btn1.py 
+  685  nano btn1.py
+  686  sudo python3 btn1.py 
+  687  nano btn1.py
+  688  sudo python3 btn1.py 
+  689  ls
+  690  ls -l
+  691  cd /home/pi/Desktop/luma.examples/examples/
+  692  ls -l
+  693  cd /home/pi/Desktop/SmartGlass/
+  694  git add -A
+  695  git commit -m "add btn1"
+  696  git push -u origin master 
+  697  git pull origin master 
+  698  cp v1/v1_btnGeatureWithFontAwesome.py /home/pi/Desktop/luma.examples/examples/
+  699  cd /home/pi/Desktop/luma.examples/examples/
+  700  sudo python3 vv1_b
+  701  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  702  nano v1_btnGeatureWithFontAwesome.py 
+  703  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  704  nano v1_btnGeatureWithFontAwesome.py 
+  705  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  706  sudo python3 v1_GeatureWithFontAwesome.py 
+  707  i2cdetect -y 1 
+  708  sudo shutdown -h now
+  709  i2cdetect -y 1 
+  710  ls
+  711  cd Desktop/
+  712  ls
+  713  cd SmartGlass/
+  714  ls
+  715  cd v1/
+  716  ls
+  717  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  718  cd /home/pi/Desktop/luma.examples/examples/
+  719  ls
+  720  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  721  ld
+  722  ls
+  723  rm v1_btnGeatureWithFontAwesome.py 
+  724  cd /home/pi/Desktop/SmartGlass/
+  725  ls
+  726  git pull origin master 
+  727  cp v1/v1_btnGeatureWithFontAwesome.py /home/pi/Desktop/luma.examples/examples/
+  728  cd  /home/pi/Desktop/luma.examples/examples/
+  729  ls
+  730  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  731  nano v1_btnGeatureWithFontAwesome.py 
+  732  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  733  nano v1_btnGeatureWithFontAwesome.py 
+  734  sudo python3 v1_btnGeatureWithFontAwesome.py 
+  735  sudo shutdown --h now 
+  736  sudo shutdown -h now 
+  737  ls
+  738  cd Desktop/SmartGlass/
+  739  ls
+  740  git pull origin master 
+  741  cp v1/v1_btnDGeatureWithFontAwesome.py 
+  742  cp v1/v1_btnDGeatureWithFontAwesome.py /home/pi/Desktop/luma.examples/examples/
+  743  cd /home/pi/Desktop/luma.examples/examples/
+  744  ls
+  745  sudo python3 v1_btnDGeatureWithFontAwesome.py 
+  746  nano v1_btnDGeatureWithFontAwesome.py 
+  747  sudo python3 v1_btnDGeatureWithFontAwesome.py 
+  748  nano v1_btnDGeatureWithFontAwesome.py 
+  749  sudo python3 v1_btnDGeatureWithFontAwesome.py 
+  750  nano v1_btnDGeatureWithFontAwesome.py 
+  751  ls
+  752  sudo python3 v1_GeatureWithFontAwesome.py 
+  753  nano v1_btnDGeatureWithFontAwesome.py 
+  754  sudo python3 v1_btnDGeatureWithFontAwesome.py 
+  755  rm /home/pi/Desktop/SmartGlass/v1/v1_btnDGeatureWithFontAwesome.py 
+  756  cp v1_btnDGeatureWithFontAwesome.py /home/pi/Desktop/SmartGlass/v1/
+  757  cd /home/pi/Desktop/SmartGlass/v1/
+  758  git add -A
+  759  git commit -m "working v1_btnD"
+  760  git push -u origin master 
+  761  ls
+  762  sudo python3 btn1.py
+  763  git push -u origin master 
+  764  git status
+  765  cd ..
+  766  git pull origin master 
+  767  cp v1/v1_btnBGeatureWithFontAwesome.py 
+  768  cp v1/v1_btnBGeatureWithFontAwesome.py /home/pi/Desktop/luma.examples/examples/
+  769  cd /home/pi/Desktop/luma.examples/examples/
+  770  ls
+  771  sudo python v1_btnBGeatureWithFontAwesome.py 
+  772  sudo python3 v1_btnBGeatureWithFontAwesome.py 
+  773  nano v1_btnBGeatureWithFontAwesome.py 
+  774  sudo python3 v1_btnBGeatureWithFontAwesome.py 
+  775  sudo shudown -h now 
+  776  sudo shutdown -h now 
+  777  cd Desktop/luma.examples/examples/
+  778  ls
+  779  nano AllBluWithScr.py 
+  780  cp AllBluWithScr.py /home/pi/Desktop/SmartGlass/v1/
+  781  cd AllBluWithScr.py /home/pi/Desktop/SmartGlass/
+  782  cd  /home/pi/Desktop/SmartGlass/
+  783  git status
+  784  git add -A
+  785  git commit -m "AllBlueWithScr"
+  786  git push -u origin master 
+  787  sudo shutdown -h now 
+  788  sudo apt-get update
+  789  sudo apt-get install apache2 -y
+  790  sudo ifconfig 
+  791  sudo apt-get install php libapache2-mod-php -y
+  792  sudo apt-get update
+  793  sudo apt-get install php libapache2-mod-php -y
+  794  sudo apt-get install php -y
+  795  ping mirrordirector.raspbian.org
+  796  sudo apt-get install php5 libapache2-mod-php5 -y
+  797  ls
+  798  cd /
+  799  ls
+  800  cd var/
+  801  ls
+  802  cd www/
+  803  ls
+  804  cd html/
+  805  ls
+  806  mv index.html index_Old.html 
+  807  sudo mv index.html index_Old.html 
+  808  ls
+  809  sudo leafpad index.php
+  810  nano index.php
+  811  suso nano index.php
+  812  sudo nano index.php
+  813  sudo mkdir images
+  814  cd images/
+  815  touch test
+  816  sudo touch test.txt
+  817  cd ..
+  818  ls
+  819  sudo nano index.php
+  820  chmod * 777
+  821  sudo chmod * 777
+  822  sudo chmod  777
+  823  sudo chmod images  777
+  824  ls -l
+  825  sudo chmod *.*  777
+  826  sudo chmod  777 *
+  827  ls -l
+  828  cd images/
+  829  ls -l
+  830  sudo chmod  777 *
+  831  cd ..
+  832  sudo nano index.php
+  833  cd images/
+  834  sudo showdown -h now
+  835  sudo shotdown -h now
+  836  sudo shutdown -h now
+  837  cd  /home/pi/Desktop/SmartGlass/
+  838  cd Desktop/luma.examples/examples/
+  839  cd ../Desktop/luma.examples/examples/
+  840  cd ..
+  841  cd luma.examples/examples/
+  842  ls
+  843  history 
+  844  cd ~
+  845  history > history_for_print.txt
